@@ -42,6 +42,9 @@ img{
         background-image: linear-gradient(to bottom right, #d63299, yellow, #d63299);
 
     }
+    h1{
+        text-align: center;
+    }
     .main.title{
         font-size: 2rem;
         margin-bottom: .5rem;
