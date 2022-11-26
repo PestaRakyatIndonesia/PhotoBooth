@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600:700&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans',sans-serif;
+    min-height: 100vh;
+    line-height: 1.5  ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+:root{
+    --shadow: 0 .5rem 1rem rgba(0,0,0,.05);
+    --blue: #0D99FF;
+    --blue-ligth: #CFEBFF;
+    --blue-dark: #0A7ACC;
+
+    --rounded: .25rem;
+    --rounded-md: .5rem;
+}
+/* form */
+    .main{
+        max-width: 640px;
+        box-shadow: var(--shadow);
+        padding: 1.5rem;
+        border-radius: var(--rounded-md);
+    }
+    .main.title{
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+    .main.description{
+        margin-bottom: 2rem;
+    }
+    .form-group{
+        margin-bottom: 1.5rem;
+    }
+    input,
+    textarea,
+    select {
+        width: 100%;
+        padding: .75rem 1rem;
+        font-size: 1rem;
+        outline: none;
+        border-radius: var(--rounded);
+        border: 1px solid #bbb ;
+
+    }
+    select:focus,
+    input:focus{
+        border-color: var(--blue);
+        box-shadow: 0 0 0 .25rem var(--blue-ligth);
+    }
+    select
+    {
+        color: grey;
+    }
+    option
+    {
+        color: #000;
+    }
+    option:first-child
+    {
+    color: grey;
+    }
+    .tombol{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cek{
+        display: flex;
+        padding: 10px;
+    }
+    .cek input{
+        width: 13px;
+    }
+    .pesan{
+        float: left;
+    }
+    .btn-register{
+        padding: .5rem 1rem;
+        cursor: pointer;
+        border-radius: var(--rounded);
+        background-color: var(--blue);
+        color: #fff;
+        border: none;
+        font-size: 1rem;
+        outline: none;
+    }
+    .btn-register:hover{
+        background-color: var(--blue-dark);
+    }
+    .btn-register:focus,
+    .btn-register:active{
+        box-shadow: 0 0 0 .25rem var(--blue-ligth);
+
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #kiri{
+        width: 47.5%;
+    }
+    #kanan{
+        width: 47.5%;
+    }
+/* form */

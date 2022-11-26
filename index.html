@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <form id="form">
+            <h1>Photo Booth Pesta rakyat Indonesia</h1>
+            <p class="contact description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab eos quaerat laboriosam expedita velit laborum repudiandae ad tenetur? Minima nesciunt et natus vitae repudiandae dolores non quasi nobis ratione.</p>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email"placeholder="Alamat email Anda">
+            </div>
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" name="name" id="name" placeholder="Nama Kamu Siapa?">
+            </div>
+            <div class="row">
+                <div class="form-group" id="kiri">
+                    <label for="phone">Nomor hengpon</label>
+                    <input type="text" name="phone" id="matric" placeholder="+62 17081945">
+                </div>
+                <div class="form-group" id="kanan">
+                    <label for="matric">Nomor <s>Togel</s> Matrik</label>
+                    <input type="text" name="matric" id="matric" placeholder="010101">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div>
+                    <label for="inasis">Inasis</label>
+                </div>
+                <div class="content">
+                    <select name="inasis" id="">
+                        <option value="" disabled selected>Lu inasis mana Gan?</option>
+                        <option value="Sisiran Naib Canselor">Sisiran Naib Canselor</option>
+                        <option value="Sisiran Sintok">Sisiran Sintok</option>
+                        <option value="Taman Universiti">Taman Universiti</option>
+                        <option value="Bank Rakyat">Bank Rakyat</option>
+                        <option value="Small and Medium Enterprises Bank (SME Bank)">Small and Medium Enterprises Bank (SME Bank)</option>
+                        <option value="Malaysia Airlines (MAS)">Malaysia Airlines (MAS)</option>
+                        <option value="Tenaga National Berhad (TNB)">Tenaga National Berhad (TNB)</option>
+                        <option value="Tradewinds">Tradewinds</option>
+                        <option value="Perusahaan Otomobil National (Proton)">Perusahaan Otomobil National (Proton)</option>
+                        <option value="Malayan Bank (Maybank)">Malayan Bank (Maybank)</option>
+                        <option value="University Inn (Uni inn)">University Inn (Uni inn)</option>
+                        <option value="Petroliam Nasional (Petronas)">Petroliam Nasional (Petronas)</option>
+                        <option value="Sime Darby">Sime Darby</option>
+                        <option value="Grant">Grant</option>
+                        <option value="Telekom Malaysia (TM)">Telekom Malaysia (TM)</option>
+                        <option value="Bank Simpanan Nasional (BSN)">Bank Simpanan Nasional (BSN)</option>
+                        <option value="Malaysia International Shipping Corporation (MISC)">Malaysia International Shipping Corporation (MISC)</option>
+                        <option value="Bank Muamalat">Bank Muamalat</option>
+                        <option value="Lainnya">Lainnya...</option>
+                    </select>
+                </div>
+                
+                
+            </div>
+            <div class="tombol"><button type="submit" class="btn-register" id="submit">Kirim</button></div>
+            <div class="cek">
+                <input type="checkbox" name="check" id="ceklis" value="true" required>
+                <label for="ceklis" id="pesan">Dengan menekan tombol kirim, Anda setuju dengan <a href="">syarat & ketentuan</a> kami</label>
+            </div>   
+        </form>
+    </div>
+    <script>
+        const form = document.querySelector("#form")
+        const submitButton = document.querySelector("#submit")
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbznB0iiHwdhR5yV2SNQ58j_6zpd0H9NA75KJKptVXfByTTCcwtYn9KBtTjSzE88ZA0c/exec'
+     
+        form.addEventListener('submit', e => {
+          submitButton.disabled = true
+          e.preventDefault()
+          let requestBody = new FormData(form)
+          fetch(scriptURL, { method: 'POST', body: requestBody})
+            .then(response => {
+               alert('Success!', response)
+               submitButton.disabled = false
+              })
+            .catch(error => {
+            alert('Error!', error.message)
+              submitButton.disabled = false
+     
+            }
+            )
+        })
+     </script>
+</body>
+</html>
