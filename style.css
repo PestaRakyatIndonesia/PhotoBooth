@@ -14,7 +14,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: chocolate;
+    background-color: white;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 250px;
 }
 :root{
     --shadow: 0 .5rem 1rem rgba(0,0,0,.05);
@@ -31,7 +39,7 @@ body{
         box-shadow: var(--shadow);
         padding: 1.5rem;
         border-radius: var(--rounded-md);
-        background-image: linear-gradient(to bottom right, #d63299, yellow);
+        background-image: linear-gradient(to bottom right, #d63299, yellow,white);
 
     }
     .main.title{
