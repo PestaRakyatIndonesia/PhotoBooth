@@ -39,7 +39,7 @@ img{
         box-shadow: var(--shadow);
         padding: 1.5rem;
         border-radius: var(--rounded-md);
-        background-image: linear-gradient(to bottom right, #d63299, yellow, white);
+        background-image: linear-gradient(to bottom right, #d63299, yellow, #d63299);
 
     }
     .main.title{
